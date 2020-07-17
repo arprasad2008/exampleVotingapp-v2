@@ -6,9 +6,9 @@ metadata:
     app: demo-voting-app
     name: voting-app-pod
 spec:
-   replicas: 1
+   replicas: 3
    selector:
-     matchlabels:
+     matchLabels:
        app: demo-voting-app
        name: voting-app-pod
     template:
@@ -22,4 +22,4 @@ spec:
             - name: voting-app
               image: dockersamples/examplevotingapp_vote
               ports:
-                -containerPort: 80
+                - containerPort: 80
